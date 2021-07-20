@@ -1,0 +1,22 @@
+﻿@page
+@model Pizza_Aurelie.Pages.Admin.IndexModel
+@{
+}
+
+<div>Authentifiez-vous !</div>
+<br />
+<br />
+<form method="post">
+    <input type="text" name="username" placeholder="Login"><br /><br />
+    <input type="password" name="password" placeholder="Mot de passe"><br /><br />
+    <button>Se connecter</button>
+</form>
+<br />
+
+@if (@Model.DisplayInvalidAccountMessage)
+{
+    <div class="alert alert-danger" role="alert">
+        ERREUR : Le login ou le mot de passe n'est pas valide !
+    </div>
+}
+

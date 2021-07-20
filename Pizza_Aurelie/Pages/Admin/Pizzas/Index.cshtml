@@ -1,0 +1,54 @@
+﻿@page
+@model Pizza_Aurelie.Pages.Admin.Pizzas.IndexModel
+
+@{
+    ViewData["Title"] = "Administration des Pizzas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-page="Create">Nouveau</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @* DisplayNameFor: c'est la façon dont il veut afficher les noms des chaamps, il utilise par défaut le nom du model mais on peut changer cela en utilisant des annotations dans la classe du model Pizza *@
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].Prix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].EstVegetarienne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].Ingredients)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pizza) {
+        <tr>
+            <td>
+                @item.Nom
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstVegetarienne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredients)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PizzaID">Modifier</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PizzaID">Supprimer</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

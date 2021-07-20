@@ -1,0 +1,93 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap');
+
+li {
+    color:blue;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/40 Black Grunge Wallpapers  Black Backgrounds  FreeCreatives.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Arial;
+    margin: 0px;
+    color: #fff;
+    /*background-attachment: scroll;*/
+}
+#logo {
+    font-family: 'Qahiri', sans-serif;
+    color: #fff;
+    font-size: 64px;
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 15px
+}
+
+#main_page {
+    display : flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: #fff;
+    background: #D33615;
+    display: inline;
+    padding: 8px 22px
+}
+
+.menu_title {
+    margin-top : 30px
+}
+
+.menu_list {
+    margin-left: 50px;
+    
+}
+.menu_list_header{
+    margin-bottom : 5px;
+}
+
+.menu_list_title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.menu_list_item {
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.menu_list_price {
+    margin-left: 5px;
+    color: #D33615;
+}
+
+.menu_list_ingredients {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 350px;
+}
+
+#photo {
+   order: 1;
+}
+
+
+#photo_img {
+    margin-top: 23%;
+}
+
+.estVegetarienne {
+    margin-bottom: 0;
+    font-size: 11px;
+    background-color: #D33615;
+    width: 80px;
+    padding: 3px 7px;
+    border-radius: 15px;
+    margin-top: 0;
+    font-weight: bold;
+}

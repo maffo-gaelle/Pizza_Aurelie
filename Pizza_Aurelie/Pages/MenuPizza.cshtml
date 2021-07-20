@@ -1,0 +1,45 @@
+﻿@page
+@model Pizza_Aurelie.Pages.MenuPizzaModel
+@{
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Menu des pizzas</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <p id="logo">Pizzaaaa mmmmm !!!!!</p>
+    <div id="main_page">
+        <div id="pizzas">
+            <div class="menu_title">
+                <h1>Nos Pizzas</h1>
+            </div>
+            <div class="menu_list">
+                @foreach (var item in Model.Pizzas)
+                {
+                <div class="menu_list_item">
+                    <p class="menu_list_header"><span class="menu_list_title">@item.Nom</span>  <span class="menu_list_price">@String.Format("{0:0.00}", item.Prix) € </span></p>
+                    <p class="menu_list_ingredients">@Html.DisplayFor(modelItem => item.Ingredients)</p>
+                    @if (item.EstVegetarienne)
+                    {
+                        <p class="estVegetarienne">Végétarienne</p>
+                    }
+                </div>
+
+                }
+            </div>
+            <div style="margin-bottom: 20px; margin-left: 50px;">
+                <a asp-page="Index" style="color: #D33615; text-decoration: none; font-size: 20px;">Retour à l'accueil</a>
+            </div>
+            
+        </div>
+        <div id="photo">
+            <div id="photo_img">
+                <img src="~/images/p-removebg-preview.png" alt="Alternate Text" width=700 height=420 />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

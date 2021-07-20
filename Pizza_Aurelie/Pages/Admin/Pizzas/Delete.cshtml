@@ -1,0 +1,45 @@
+﻿@page
+@model Pizza_Aurelie.Pages.Admin.Pizzas.DeleteModel
+
+@{
+    ViewData["Title"] = "Supprimer la Pizza";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Êtes vous sûre de vouloir supprimer cette pizza?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.Nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.Prix)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.Prix)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.EstVegetarienne)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.EstVegetarienne)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.Ingredients)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.Ingredients)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Pizza.PizzaID" />
+        <input type="submit" value="Supprimer" class="btn btn-danger" /> |
+        <a asp-page="./Index">Retour à la liste de pizzas</a>
+    </form>
+</div>
